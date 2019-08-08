@@ -1,2 +1,2 @@
 # SpringLearn
-# Lesson about "Scope"
+# Lesson about "annotation"
