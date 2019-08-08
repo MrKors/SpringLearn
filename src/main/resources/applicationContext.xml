@@ -10,16 +10,9 @@
     <context:property-placeholder location="musicPlayer.properties"/> 
     
     <bean id="musicBean" 
-          class="ru.mrkors.springapp.RapMusic">
+          class="ru.mrkors.springapp.RapMusic"
+          init-method="InitMethod"
+          destroy-method="DestroyMethod"
+          factory-method="setRapMusic">
     </bean>
-        
-    <bean id="musicPlayer"
-          class="ru.mrkors.springapp.MusicPlayer"
-          scope= "prototype">
-        <property name="music" ref="musicBean"/>
-                
-        <property name="name" value="${musicPlayer.name}"/>
-        <property name="volume" value="${musicPlayer.volume}"/>
-    </bean>
-
 </beans>
