@@ -1,8 +1,4 @@
 package ru.mrkors.springapp;
-
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  *
  * @author Dima
