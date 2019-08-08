@@ -8,7 +8,7 @@ import java.util.List;
  * @author Dima
  */
 public class MusicPlayer {
-    private Music music;
+    private List<Music> musicList = new ArrayList<>();
     
     private String name;
     private int volume;
@@ -33,12 +33,14 @@ public class MusicPlayer {
         
     }
 
-    public void setMusic(Music music) {
-        this.music = music;        
+    public void setMusicList(List<Music> musicList) {
+        this.musicList = musicList;        
     }
     
     public void playSong(){
-        System.out.println("Playing: "+ music.getSong());
+        for(Music s : musicList){
+            System.out.println("Playing: "+ s.getSong());
+        }
     }
     
     
