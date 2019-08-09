@@ -1,41 +1,34 @@
 package ru.mrkors.springapp;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Component;
+
 /**
  *
  * @author Dima
  */
+@Component
 public class MusicPlayer {
-    private Music music;
+//    @Autowired
+//    private Music music;
     
-    private String name;
-    private int volume;
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public int getVolume() {
-        return volume;
-    }
-
-    public void setVolume(int volume) {
-        this.volume = volume;
-    }
-
-    public MusicPlayer(Music music) {
-        this.music = music;
+    private ClassicalMusic classicalMusic;
+    private RockMusic rockMusic;
+    
+    @Autowired
+    public MusicPlayer(ClassicalMusic classicalMusic, RockMusic rockMusic) {
+        this.classicalMusic = classicalMusic;
+        this.rockMusic = rockMusic;
     }
     
-    public void setMusic(Music music) {
-        this.music = music;        
+//    private Music music;
+//    @Autowired
+//    public void setMusic(Music music) {
+//        this.music = music;
+//    }
+                
+    public String playSong(){
+        return "Playing: " + classicalMusic.getSong();
+//        System.out.println("Playing: "+ rockMusic.getSong());
     }
-    
-    public void playSong(){
-        System.out.println("Playing: "+ music.getSong());
-    }
-    
-    
-}
+ }
