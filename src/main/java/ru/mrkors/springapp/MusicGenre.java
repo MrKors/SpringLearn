@@ -1,8 +1,9 @@
 package ru.mrkors.springapp;
+
 /**
  *
  * @author Dima
  */
-public class Computer {
-    
+public enum MusicGenre {
+    CLASSICAL, ROCK
 }

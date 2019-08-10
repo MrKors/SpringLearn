@@ -1,9 +1,11 @@
 package ru.mrkors.springapp;
 
+import java.util.List;
+
 /**
  *
  * @author Dima
  */
 public interface Music {
-    String getSong();
+    List<Enum> getSong();
 }

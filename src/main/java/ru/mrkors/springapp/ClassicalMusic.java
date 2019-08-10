@@ -1,5 +1,7 @@
 package ru.mrkors.springapp;
 
+import java.util.ArrayList;
+import java.util.List;
 import org.springframework.stereotype.Component;
 
 /**
@@ -8,11 +10,15 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class ClassicalMusic implements Music{
-
-    @Override
-    public String getSong() {
-        return "Hungarian Rapsody";
+    List <Enum> classicalMusicList = new ArrayList<>();
+    {
+        for(Enum s: ClassicalMusicList.values()){
+            classicalMusicList.add(s);
+        }
     }
-    
-    
+       
+    @Override
+    public List<Enum> getSong() {
+        return classicalMusicList;
+    }
 }

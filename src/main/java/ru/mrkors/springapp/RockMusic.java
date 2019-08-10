@@ -1,5 +1,6 @@
 package ru.mrkors.springapp;
 
+import java.util.List;
 import org.springframework.stereotype.Component;
 
 /**
@@ -10,9 +11,8 @@ import org.springframework.stereotype.Component;
 public class RockMusic implements Music{
 
     @Override
-    public String getSong() {
-        return "Wind cries Mary";
+    public List<Enum> getSong() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
-    
+
 }
