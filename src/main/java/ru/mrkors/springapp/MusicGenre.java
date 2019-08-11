@@ -5,5 +5,5 @@ package ru.mrkors.springapp;
  * @author Dima
  */
 public enum MusicGenre {
-    CLASSICAL, ROCK
+    CLASSICAL, ROCK, RAP
 }

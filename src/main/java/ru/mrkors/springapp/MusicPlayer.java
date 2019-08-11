@@ -14,12 +14,13 @@ public class MusicPlayer {
 //    private Music music;
     
     private ClassicalMusic classicalMusic;
-//    private RockMusic rockMusic;
+    private RockMusic rockMusic;
+    private RapMusic rapMusic;
     
     @Autowired
-    public MusicPlayer(ClassicalMusic classicalMusic) {
+    public MusicPlayer(ClassicalMusic classicalMusic, RapMusic rapMusic) {
         this.classicalMusic = classicalMusic;
-//        this.rockMusic = rockMusic;
+        this.rapMusic = rapMusic;
     }
     
 //    private Music music;
@@ -28,14 +29,19 @@ public class MusicPlayer {
 //        this.music = music;
 //    }
                 
-    public String playSong(MusicGenre genre){
-      
+    public String playSong(MusicGenre musicGenre){
         Random random = new Random();
-        int rndNumber = random.nextInt(ClassicalMusicList.values().length);
-        if(genre == MusicGenre.CLASSICAL){
-        return "Playing: " + classicalMusic.getSong().get(rndNumber);
-//        System.out.println("Playing: "+ rockMusic.getSong());
-    }
-        else return "fail";
-    }
+        int rndSong;
+        
+        if(musicGenre == MusicGenre.CLASSICAL){
+            rndSong = random.nextInt(ClassicalMusicList.values().length);   
+        return "Playing: " + classicalMusic.getSong().get(rndSong);
+        }
+        else if(musicGenre == MusicGenre.RAP){
+            rndSong = random.nextInt(RapMusicList.values().length);
+            return "Playing: " + rapMusic.getSong().get(rndSong);
+        }    
+        else return "fail"; 
+        
  }
+}
