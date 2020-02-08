@@ -1,2 +1,2 @@
 # SpringLearn
-# Lesson about Annotation (@Autowired)
+# Annotation's lesson (@Autowired)
