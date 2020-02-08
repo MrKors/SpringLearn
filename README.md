@@ -1,2 +1,2 @@
 # SpringLearn
-# Lesson about "annotation" @Component
+# Annotation's lesson (@Component)
