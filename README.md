@@ -1,2 +1,2 @@
 # SpringLearn
-# Lesson about bean List
+# Bean List's lesson
